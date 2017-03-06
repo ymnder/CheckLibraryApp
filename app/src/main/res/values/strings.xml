@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CheckLibraryApplication</string>
+    <string name="welcome_text">Hello World :)</string>
+    <string name="font_size_slider">change font size</string>
+    <string name="night_mode_switch">night mode</string>
+    <string name="save_button">save settings</string>
+    <string name="get_emoji_button">get emoji</string>
+    <string name="lynx_button">open Lynx</string>
+</resources>

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.ymnd.app.checklibraryapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //ORM Lite
+    compile 'com.j256.ormlite:ormlite-core:5.0'
+    compile 'com.j256.ormlite:ormlite-android:5.0'
+
+    //OkHttp
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //Gson
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    //Timber
+    compile 'com.jakewharton.timber:timber:4.5.1'
+
+    //Stetho
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile 'com.facebook.stetho:stetho-timber:1.4.2@aar'
+    compile 'com.facebook.stetho:stetho-js-rhino:1.4.2'
+
+    //Chuck
+    compile 'com.readystatesoftware.chuck:library:1.0.4'
+
+    //Lynx
+    compile 'com.github.pedrovgs:lynx:1.0.7'
+
+    //Android-Debug-Database
+    compile 'com.amitshekhar.android:debug-db:1.0.0'
+
+
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    testCompile 'junit:junit:4.12'
+}
